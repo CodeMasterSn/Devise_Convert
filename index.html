@@ -6,69 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
 </head>
 <body>
-    <form action="">
-        <!-- title of form -->
-        <div class="title-form">
-            <span><i></i>Convert</span>
+    <div class="devise-convert">
+        <form action="">
+            <!-- title of form -->
+            <div class="title-form">
+                <span><i class="fa-brands fa-bitcoin"></i>Convert</span>
+            </div>
+    
+            <!-- input -->
+            <div class="input-convert">
+                <!-- amount -->
+                <div class="amount">
+                    <label for="amount">Montant</label>
+                    <input type="text" name="amount" placeholder="200,00 $">
+                    <span id="amount-valid">Veuillez saisir un montant valide</span>
+                </div>
+    
+                <!-- devise -->
+                <div class="devise-origin">
+                    <label for="devise-Origin">Devise D'origine</label>
+                    <select name="devise-Origin" id="devise-origin">
+                        <option value="dollar" id="dollar"><img src="./img/etats-unis.png"> USD - Dollar des Etats-Unis</option>
+                        <option value="euro" id="euro"><img src="./img/france.png"> EUR - Euro</option>
+                        <option value="livre" id="livre"><img src="./img/royaume-uni.png"> GBP - Livre Britanique</option>
+                        <option value="cad" id="cad"><img src="./img/canada.png"> CAD - Dollar Canadien</option>
+                        <option value="aud" id="aud"><img src="./img/australie.png"> AUD - Dollar Australien</option>
+                        <option value="jpy" id="jpy"><img src="./img/japon.png"> JPY - Yen Japonais</option>
+                    </select>
+                </div>
+    
+                <!-- switch devise -->
+                <div class="switch">
+                    <span><i class="fa-solid fa-arrow-left"></i></span>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+    
+                <!-- Devise Finale -->
+                <div class="devise-final">
+                    <label for="devise-Final">Devise D'origine</label>
+                    <select name="devise-Final" id="devise-final">
+                        <option value="euro" id="euro"><img src="./img/france.png"> EUR - Euro</option>
+                        <option value="dollar" id="dollar"><img src="./img/etats-unis.png"> USD - Dollar des Etats-Unis</option>
+                        <option value="livre" id="livre"><img src="./img/royaume-uni.png"> GBP - Livre Britanique</option>
+                        <option value="cad" id="cad"><img src="./img/canada.png"> CAD - Dollar Canadien</option>
+                        <option value="aud" id="aud"><img src="./img/australie.png"> AUD - Dollar Australien</option>
+                        <option value="jpy" id="jpy"><img src="./img/japon.png"> JPY - Yen Japonais</option>
+                    </select>
+                </div>
+    
+                <!-- button submit -->
+                <button id="btn-submit">Submit</button>
+            </div>
+        </form>
+    
+        <!-- result -->
+        <div class="result">
+            <p id="result-final">
+                Insert the result final
+            </p>
         </div>
-
-        <!-- input -->
-        <div class="input-convert">
-            <!-- amount -->
-            <div class="amount">
-                <label for="amount">Montant</label>
-                <input type="text" name="amount" placeholder="200,00 $">
-                <span id="amount-valid">Veuillez saisir un montant valide</span>
-            </div>
-
-            <!-- devise -->
-            <div class="devise-origin">
-                <label for="devise-Origin">Devise D'origine</label>
-                <select name="devise-Origin" id="devise-origin">
-                    <option value="dollar" id="dollar"><i></i> USD - Dollar des Etats-Unis</option>
-                    <option value="euro" id="euro"><i></i> EUR - Euro</option>
-                    <option value="livre" id="livre"><i></i> GBP - Livre Britanique</option>
-                    <option value="cad" id="cad"><i></i> CAD - Dollar Canadien</option>
-                    <option value="aud" id="aud"><i></i> AUD - Dollar Australien</option>
-                    <option value="jpy" id="jpy"><i></i> JPY - Yen Japonais</option>
-                </select>
-            </div>
-
-            <!-- switch devise -->
-            <div class="switch">
-                <span><i></i></span>
-                <span><i></i></span>
-            </div>
-
-            <!-- Devise Finale -->
-            <div class="devise-final">
-                <label for="devise-Final">Devise D'origine</label>
-                <select name="devise-Final" id="devise-final">
-                    <option value="euro" id="euro"><i></i> EUR - Euro</option>
-                    <option value="dollar" id="dollar"><i></i> USD - Dollar des Etats-Unis</option>
-                    <option value="livre" id="livre"><i></i> GBP - Livre Britanique</option>
-                    <option value="cad" id="cad"><i></i> CAD - Dollar Canadien</option>
-                    <option value="aud" id="aud"><i></i> AUD - Dollar Australien</option>
-                    <option value="jpy" id="jpy"><i></i> JPY - Yen Japonais</option>
-                </select>
-            </div>
-
-            <!-- button submit -->
-            <button id="btn-submit">Submit</button>
+    
+        <!-- info -->
+        <div class="info">
+            <span>1 USD = 0,946745 EUR</span>
+            <span>1 EUR = 1,05625 USD</span>
         </div>
-    </form>
-
-    <!-- result -->
-    <div class="result">
-        <p id="result-final"></p>
-    </div>
-
-    <!-- info -->
-    <div class="info">
-        <span>1 USD = 0,946745 EUR</span>
-        <span>1 EUR = 1,05625 USD</span>
     </div>
     <!-- Script -->
     <script src="./main.js"></script>
